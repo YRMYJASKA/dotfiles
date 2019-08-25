@@ -1,0 +1,46 @@
+((("company-irony" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("irony-cdb-autosetup-compile-options" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("irony-mode" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("irony" .
+   [1 0 0 0 1])
+  ("c++-mode" .
+   [0 0 0 1 0 0 0 0])
+  ("add-hook" .
+   [0 0 0 0 0 0 0 1])
+  ("flycheck-pycheckers-setup" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("company" .
+   [1 0 0 0 0 0 0])
+  ("with-eval-after-load" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("lambda" .
+   [1 0 0 0 0 0])
+  ("kill-line" .
+   [1 0 0 0 0 0 0 0 0])
+  ("beginning-of-line" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("bindings--define-key" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("default-button" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("Set" .
+   [0 0 1])
+  ("default" .
+   [0 0 0 1 0 0 1])
+  ("defalias" .
+   [0 0 0 0 0 0 0 1])
+  ("setq" .
+   [2 0 0 0])
+  ("auto-complete" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("defun" .
+   [0 0 0 0 1])
+  ("interactive" .
+   [1 0 0 0 0 0 0 0 0 0 0])))

@@ -1,0 +1,1 @@
+("~/dotfiles/" "~/Shared/JHNAI/" "~/Documents/Programming/djinni/" "~/Documents/Programming/" "~/.emacs.d/elpa/auctex-12.1.2/")
