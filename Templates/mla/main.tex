@@ -1,0 +1,21 @@
+\documentclass{article}
+
+
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage[british]{babel}
+\usepackage{csquotes}
+\usepackage{ifpdf}
+\usepackage{mla}
+\usepackage[style=mla, backend=biber]{biblatex}
+
+\addbibresource{bibliography.bib}
+
+\begin{document}
+\begin{mla}{Jyry}{Hjelt}{<teacher>}{10E}{\today}{Template title}
+
+\blindtext \cite{DUMMY:1}
+
+\printbibliography
+\end{mla}
+\end{document}
