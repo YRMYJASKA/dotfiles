@@ -9,3 +9,5 @@ cp ~/.i3 . -r
 cp ~/.config/i3/config ./.config/i3/config
 
 cp -r ~/Templates/ .
+
+cp -r ~/.emacs.d .
