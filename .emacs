@@ -88,6 +88,12 @@
   (add-to-list 'TeX-view-program-list '("mupdf" "usr/bin/mupdff %o"))
   (setcdr (assq 'output-pdf TeX-view-program-selection) '("mupdf")))
 
+;; HTML
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;; Flyspell
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Programming Misc.
@@ -107,6 +113,44 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
+
+;; Javascript
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+
+
+;; Better imenu
+(add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
+
+;; Typescript
+
+(load-library "flycheck-typescript-tslint")
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-typescript-tslint-setup))
+
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  ;; company is an optional dependency. You have to
+  ;; install it separately via package-install
+  ;; `M-x package-install [ret] company`
+  (company-mode +1))
+
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+
+;; formats the buffer before saving
+(add-hook 'before-save-hook 'tide-format-before-save)
+
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Custom bindings
@@ -139,7 +183,7 @@
     ("1436d643b98844555d56c59c74004eb158dc85fc55d2e7205f8d9b8c860e177f" "585942bb24cab2d4b2f74977ac3ba6ddbd888e3776b9d2f993c5704aa8bb4739" default)))
  '(package-selected-packages
    (quote
-    (yasnippet-snippets auctex-latexmk yasnippet auctex markdown-preview-mode all-the-icons markdown-mode projectile irony flycheck-pycheckers flycheck-haskell flycheck-irony company-irony company-ghc company-jedi company gruvbox-theme))))
+    (tide web-mode js2-mode typescript-mode yasnippet-snippets auctex-latexmk yasnippet auctex markdown-preview-mode all-the-icons markdown-mode projectile irony flycheck-pycheckers flycheck-haskell flycheck-irony company-irony company-ghc company-jedi company gruvbox-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

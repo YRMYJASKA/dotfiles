@@ -22,11 +22,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 " More colors
 Plugin 'flazz/vim-colorschemes'
-Plugin 'rafi/awesome-vim-colorschemes'
-Plugin 'altercation/vim-colors-solarized'
 " Syntax checking and a clear tree overview of a project
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/NERDtree'
+" More colors :D
+Plugin 'altercation/vim-colors-solarized'
 " For making code more organized
 Plugin 'junegunn/vim-easy-align'
 " Easy file awitching
@@ -37,9 +37,6 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'cespare/vim-toml'
 " Auto pairing for ()'s []'s and {}'s and other things
 Plugin 'jiangmiao/auto-pairs'
-let g:AutoPairsMapBS = 0
-" Vimproc
-Plugin 'Shougo/vimproc'
 " Sorting python includes
 Plugin 'fisadev/vim-isort'
 " Auto-formatting because I'm lazy
@@ -53,8 +50,8 @@ Plugin 'alvan/vim-closetag'
 " LaTeX writing
 Plugin 'lervag/vimtex'
 " Haskell
-Plugin 'raichoo/haskell-vim'
-"Plugin 'alx741/vim-hindent'
+Plugin 'neovimhaskell/haskell-vim'
+Plugin 'alx741/vim-hindent'
 " Vim note-taking
 Plugin 'vimwiki/vimwiki'
 Plugin 'plasticboy/vim-markdown'
@@ -108,8 +105,8 @@ let g:syntastic_asm_checkers = ['nasm']
 " let g:syntastic_cpp_include_dirs = ["~/Qt5.6.1/5.6/gcc_64/include/*"]
 
 " Formatting
-syntax on
 filetype plugin indent on
+syntax on
 
 " Bleh.
 set tabstop=4
@@ -195,34 +192,7 @@ noremap  <buffer> <silent> $ g$
 
 set completeopt=longest,menuone,preview
 
-" Haskell settings
-let g:haskell_enable_quantification = 1   
-let g:haskell_enable_recursivedo = 1     
-let g:haskell_enable_arrowsyntax = 1      
-let g:haskell_enable_pattern_synonyms = 1 
-let g:haskell_enable_typeroles = 1      
-let g:haskell_enable_static_pointers = 1  
-let g:haskell_backpack = 1             
-
-let g:hindent_on_save = 1
- let g:haskell_indent_disable = 1
-
-"let g:haskell_indent_if = 3
-"let g:haskell_indent_case = 2
-"let g:haskell_indent_let = 4
-"let g:haskell_indent_where = 6
-"let g:haskell_indent_before_where = 2
-"let g:haskell_indent_after_bare_where = 2
-"let g:haskell_indent_do = 3
-"let g:haskell_indent_in = 1
-"let g:haskell_indent_guard = 2
-
-autocmd FileType hs set autoindent
-autocmd FileType hs set nocindent
-autocmd FileType hs set smartindent
-
-
-"common mistakes fixed
+" common mistakes fixed
 cnoreabbrev E e
 cnoreabbrev Q q
 cnoreabbrev Qa qa
@@ -241,5 +211,4 @@ let g:indentLine_concealcursor = 'n'
 set concealcursor-=n
 
 " Colorscheme
-"colo 1989 
-colo termschool
+colo 1989 
