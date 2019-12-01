@@ -3,7 +3,7 @@ TSC=tsc
 TSLINT=tslint
 
 #source dir
-TS_DIRS=./apps ./lib ./library
+TS_DIRS=./src ./src/libs
 
 #source files
 TS_SRC ::= $(shell find $(TS_DIRS) -name '*.ts' -not -name "*.d.ts")

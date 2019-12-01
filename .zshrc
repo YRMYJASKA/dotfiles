@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/jyryhjelt/.oh-my-zsh"
+  export ZSH="/home/jyry/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="kolo"
+ZSH_THEME="arrow"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -92,6 +92,8 @@ function new_project(){
 	cp -r ~/Templates/$1 ./$2
 }
 
+#TERM=screen-256color
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -102,7 +104,9 @@ function new_project(){
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.cabal/bin
+export PATH=$PATH:~/.cargo/bin
 alias ls="ls -a --color=auto --group-directories-first"
+LS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS
 alias rm="rm -r" 
 alias vim="vimx --servername vim"
 alias v="vimx --servername vim"
@@ -111,3 +115,8 @@ alias dup="sudo dnf update"
 alias dr="sudo dnf remove"
 alias ci="vim ~/.config/i3/config"
 alias p="new_project"
+
+#go 
+export PATH=$PATH:/usr/local/go/bin
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
