@@ -1,0 +1,333 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Arg	Templates/cpp/tests/catch.hpp	/^		class Arg : public ParserRefImpl<Arg> {$/;"	c	namespace:Catch
+AssertionInfo	Templates/cpp/tests/catch.hpp	/^struct AssertionInfo {$/;"	s	namespace:Catch
+AutoReg	Templates/cpp/tests/catch.hpp	/^struct AutoReg : NonCopyable {$/;"	s	namespace:Catch
+BENCHMARK	Templates/cpp/tests/catch.hpp	2240;"	d
+BIN_NAME	Templates/cpp/Makefile	/^BIN_NAME = out$/;"	m
+BIN_PATH	Templates/cpp/Makefile	/^BIN_PATH = $(BUILD_PATH)\/bin$/;"	m
+BUILD_PATH	Templates/cpp/Makefile	/^BUILD_PATH = build$/;"	m
+CATCH_ARC_ENABLED	Templates/cpp/tests/catch.hpp	837;"	d
+CATCH_ARC_STRONG	Templates/cpp/tests/catch.hpp	857;"	d
+CATCH_ARC_STRONG	Templates/cpp/tests/catch.hpp	876;"	d
+CATCH_BREAK_INTO_DEBUGGER	Templates/cpp/tests/catch.hpp	5606;"	d
+CATCH_CATCH_ALL	Templates/cpp/tests/catch.hpp	337;"	d
+CATCH_CATCH_ANON	Templates/cpp/tests/catch.hpp	338;"	d
+CATCH_CLARA_CONFIG_CONSOLE_WIDTH	Templates/cpp/tests/catch.hpp	6123;"	d
+CATCH_CLARA_TEXTFLOW_CONFIG_CONSOLE_WIDTH	Templates/cpp/tests/catch.hpp	6101;"	d
+CATCH_CLARA_TEXTFLOW_CONFIG_CONSOLE_WIDTH	Templates/cpp/tests/catch.hpp	6103;"	d
+CATCH_CLARA_TEXTFLOW_CONFIG_CONSOLE_WIDTH	Templates/cpp/tests/catch.hpp	6127;"	d
+CATCH_CLARA_TEXTFLOW_CONFIG_CONSOLE_WIDTH	Templates/cpp/tests/catch.hpp	6156;"	d
+CATCH_CONFIG_ALL_PARTS	Templates/cpp/tests/catch.hpp	49;"	d
+CATCH_CONFIG_COLOUR_NONE	Templates/cpp/tests/catch.hpp	174;"	d
+CATCH_CONFIG_COLOUR_NONE	Templates/cpp/tests/catch.hpp	223;"	d
+CATCH_CONFIG_CONSOLE_WIDTH	Templates/cpp/tests/catch.hpp	4101;"	d
+CATCH_CONFIG_COUNTER	Templates/cpp/tests/catch.hpp	280;"	d
+CATCH_CONFIG_CPP11_TO_STRING	Templates/cpp/tests/catch.hpp	295;"	d
+CATCH_CONFIG_CPP17_STRING_VIEW	Templates/cpp/tests/catch.hpp	303;"	d
+CATCH_CONFIG_CPP17_UNCAUGHT_EXCEPTIONS	Templates/cpp/tests/catch.hpp	299;"	d
+CATCH_CONFIG_CPP17_VARIANT	Templates/cpp/tests/catch.hpp	307;"	d
+CATCH_CONFIG_DEFAULT_REPORTER	Templates/cpp/tests/catch.hpp	4137;"	d
+CATCH_CONFIG_DEFAULT_REPORTER	Templates/cpp/tests/catch.hpp	4140;"	d
+CATCH_CONFIG_DISABLE_EXCEPTIONS	Templates/cpp/tests/catch.hpp	319;"	d
+CATCH_CONFIG_DISABLE_MATCHERS	Templates/cpp/tests/catch.hpp	57;"	d
+CATCH_CONFIG_ENABLE_CHRONO_STRINGMAKER	Templates/cpp/tests/catch.hpp	1232;"	d
+CATCH_CONFIG_ENABLE_CHRONO_STRINGMAKER	Templates/cpp/tests/catch.hpp	60;"	d
+CATCH_CONFIG_ENABLE_PAIR_STRINGMAKER	Templates/cpp/tests/catch.hpp	1229;"	d
+CATCH_CONFIG_ENABLE_TUPLE_STRINGMAKER	Templates/cpp/tests/catch.hpp	1230;"	d
+CATCH_CONFIG_ENABLE_VARIANT_STRINGMAKER	Templates/cpp/tests/catch.hpp	1231;"	d
+CATCH_CONFIG_EXTERNAL_INTERFACES	Templates/cpp/tests/catch.hpp	55;"	d
+CATCH_CONFIG_MAIN	Templates/cpp/tests/testmain.cpp	6;"	d	file:
+CATCH_CONFIG_NEW_CAPTURE	Templates/cpp/tests/catch.hpp	315;"	d
+CATCH_CONFIG_NO_CPP17_VARIANT	Templates/cpp/tests/catch.hpp	271;"	d
+CATCH_CONFIG_POSIX_SIGNALS	Templates/cpp/tests/catch.hpp	287;"	d
+CATCH_CONFIG_WCHAR	Templates/cpp/tests/catch.hpp	291;"	d
+CATCH_CONFIG_WINDOWS_SEH	Templates/cpp/tests/catch.hpp	283;"	d
+CATCH_CPP14_OR_GREATER	Templates/cpp/tests/catch.hpp	124;"	d
+CATCH_CPP17_OR_GREATER	Templates/cpp/tests/catch.hpp	128;"	d
+CATCH_DEFINED_NOMINMAX	Templates/cpp/tests/catch.hpp	5627;"	d
+CATCH_DEFINED_WIN32_LEAN_AND_MEAN	Templates/cpp/tests/catch.hpp	5631;"	d
+CATCH_ENFORCE	Templates/cpp/tests/catch.hpp	3202;"	d
+CATCH_ERROR	Templates/cpp/tests/catch.hpp	3198;"	d
+CATCH_IMPL	Templates/cpp/tests/catch.hpp	48;"	d
+CATCH_INTERNAL_CONFIG_COUNTER	Templates/cpp/tests/catch.hpp	250;"	d
+CATCH_INTERNAL_CONFIG_CPP17_STRING_VIEW	Templates/cpp/tests/catch.hpp	258;"	d
+CATCH_INTERNAL_CONFIG_CPP17_UNCAUGHT_EXCEPTIONS	Templates/cpp/tests/catch.hpp	134;"	d
+CATCH_INTERNAL_CONFIG_CPP17_UNCAUGHT_EXCEPTIONS	Templates/cpp/tests/catch.hpp	217;"	d
+CATCH_INTERNAL_CONFIG_EXCEPTIONS_ENABLED	Templates/cpp/tests/catch.hpp	233;"	d
+CATCH_INTERNAL_CONFIG_NEW_CAPTURE	Templates/cpp/tests/catch.hpp	311;"	d
+CATCH_INTERNAL_CONFIG_NO_CPP11_TO_STRING	Templates/cpp/tests/catch.hpp	180;"	d
+CATCH_INTERNAL_CONFIG_NO_CPP11_TO_STRING	Templates/cpp/tests/catch.hpp	207;"	d
+CATCH_INTERNAL_CONFIG_NO_NEW_CAPTURE	Templates/cpp/tests/catch.hpp	192;"	d
+CATCH_INTERNAL_CONFIG_NO_POSIX_SIGNALS	Templates/cpp/tests/catch.hpp	169;"	d
+CATCH_INTERNAL_CONFIG_NO_POSIX_SIGNALS	Templates/cpp/tests/catch.hpp	173;"	d
+CATCH_INTERNAL_CONFIG_NO_WCHAR	Templates/cpp/tests/catch.hpp	239;"	d
+CATCH_INTERNAL_CONFIG_NO_WINDOWS_SEH	Templates/cpp/tests/catch.hpp	186;"	d
+CATCH_INTERNAL_CONFIG_POSIX_SIGNALS	Templates/cpp/tests/catch.hpp	163;"	d
+CATCH_INTERNAL_ERROR	Templates/cpp/tests/catch.hpp	3196;"	d
+CATCH_INTERNAL_LINEINFO	Templates/cpp/tests/catch.hpp	416;"	d
+CATCH_INTERNAL_STRINGIFY	Templates/cpp/tests/catch.hpp	1939;"	d
+CATCH_INTERNAL_SUPPRESS_GLOBALS_WARNINGS	Templates/cpp/tests/catch.hpp	139;"	d
+CATCH_INTERNAL_SUPPRESS_GLOBALS_WARNINGS	Templates/cpp/tests/catch.hpp	327;"	d
+CATCH_INTERNAL_SUPPRESS_PARENTHESES_WARNINGS	Templates/cpp/tests/catch.hpp	146;"	d
+CATCH_INTERNAL_SUPPRESS_PARENTHESES_WARNINGS	Templates/cpp/tests/catch.hpp	323;"	d
+CATCH_INTERNAL_SUPPRESS_UNUSED_WARNINGS	Templates/cpp/tests/catch.hpp	152;"	d
+CATCH_INTERNAL_SUPPRESS_UNUSED_WARNINGS	Templates/cpp/tests/catch.hpp	331;"	d
+CATCH_INTERNAL_UNSUPPRESS_GLOBALS_WARNINGS	Templates/cpp/tests/catch.hpp	143;"	d
+CATCH_INTERNAL_UNSUPPRESS_GLOBALS_WARNINGS	Templates/cpp/tests/catch.hpp	328;"	d
+CATCH_INTERNAL_UNSUPPRESS_PARENTHESES_WARNINGS	Templates/cpp/tests/catch.hpp	149;"	d
+CATCH_INTERNAL_UNSUPPRESS_PARENTHESES_WARNINGS	Templates/cpp/tests/catch.hpp	324;"	d
+CATCH_INTERNAL_UNSUPPRESS_UNUSED_WARNINGS	Templates/cpp/tests/catch.hpp	155;"	d
+CATCH_INTERNAL_UNSUPPRESS_UNUSED_WARNINGS	Templates/cpp/tests/catch.hpp	332;"	d
+CATCH_PLATFORM_IPHONE	Templates/cpp/tests/catch.hpp	72;"	d
+CATCH_PLATFORM_LINUX	Templates/cpp/tests/catch.hpp	76;"	d
+CATCH_PLATFORM_MAC	Templates/cpp/tests/catch.hpp	70;"	d
+CATCH_PLATFORM_WINDOWS	Templates/cpp/tests/catch.hpp	6500;"	d
+CATCH_PLATFORM_WINDOWS	Templates/cpp/tests/catch.hpp	79;"	d
+CATCH_PREPARE_EXCEPTION	Templates/cpp/tests/catch.hpp	3194;"	d
+CATCH_REGISTER_LISTENER	Templates/cpp/tests/catch.hpp	4942;"	d
+CATCH_REGISTER_REPORTER	Templates/cpp/tests/catch.hpp	4935;"	d
+CATCH_REGISTER_TAG_ALIAS	Templates/cpp/tests/catch.hpp	428;"	d
+CATCH_RUNTIME_ERROR	Templates/cpp/tests/catch.hpp	3200;"	d
+CATCH_TEMP_CLARA_CONFIG_CONSOLE_WIDTH	Templates/cpp/tests/catch.hpp	6100;"	d
+CATCH_TRAP	Templates/cpp/tests/catch.hpp	5583;"	d
+CATCH_TRY	Templates/cpp/tests/catch.hpp	336;"	d
+CATCH_UNSAFE_UNRETAINED	Templates/cpp/tests/catch.hpp	856;"	d
+CATCH_UNSAFE_UNRETAINED	Templates/cpp/tests/catch.hpp	875;"	d
+CATCH_VERSION_MAJOR	Templates/cpp/tests/catch.hpp	15;"	d
+CATCH_VERSION_MINOR	Templates/cpp/tests/catch.hpp	16;"	d
+CATCH_VERSION_PATCH	Templates/cpp/tests/catch.hpp	17;"	d
+CLARA_CONFIG_MAIN	Templates/cpp/tests/catch.hpp	87;"	d
+CLARA_CONFIG_MAIN_NOT_DEFINED	Templates/cpp/tests/catch.hpp	86;"	d
+CLARA_CONFIG_OPTIONAL_TYPE	Templates/cpp/tests/catch.hpp	6134;"	d
+COMPILE_FLAGS	Templates/cpp/Makefile	/^COMPILE_FLAGS = -Wall -Wextra -g$/;"	m
+CXX	Templates/cpp/Makefile	/^CXX ?= g++$/;"	m
+CXXFLAGS	Templates/cpp/Makefile	/^release: export CXXFLAGS := $(CXXFLAGS) $(COMPILE_FLAGS)$/;"	m
+CaseSensitive	Templates/cpp/tests/catch.hpp	/^struct CaseSensitive {$/;"	s	namespace:Catch
+Catch	Templates/cpp/tests/catch.hpp	/^namespace Catch {$/;"	n
+Catch_global_namespace_dummy	Templates/cpp/tests/catch.hpp	/^struct Catch_global_namespace_dummy {$/;"	s
+Choice	Templates/cpp/tests/catch.hpp	/^	enum Choice {$/;"	g	struct:Catch::CaseSensitive
+ComposableParserImpl	Templates/cpp/tests/catch.hpp	/^		class ComposableParserImpl : public ParserBase {$/;"	c	namespace:Catch
+ContinueOnFailure	Templates/cpp/tests/catch.hpp	/^		ContinueOnFailure = 0x02, \/\/ Failures fail test, but execution continues$/;"	e	enum:Catch::ResultDisposition::Flags
+DEPS	Templates/cpp/Makefile	/^DEPS = $(OBJECTS:.o=.d)$/;"	m
+Detail	Templates/cpp/tests/catch.hpp	/^namespace Detail {$/;"	n	namespace:Catch
+DidntThrowException	Templates/cpp/tests/catch.hpp	/^		DidntThrowException = Exception | 2,$/;"	e	enum:Catch::ResultWas::OfType
+Exception	Templates/cpp/tests/catch.hpp	/^		Exception = 0x100 | FailureBit,$/;"	e	enum:Catch::ResultWas::OfType
+ExeName	Templates/cpp/tests/catch.hpp	/^			ExeName()$/;"	f	class:Catch::ExeName
+ExeName	Templates/cpp/tests/catch.hpp	/^			explicit ExeName(LambdaT const& lambda)$/;"	f	class:Catch::ExeName
+ExeName	Templates/cpp/tests/catch.hpp	/^			explicit ExeName(std::string& ref)$/;"	f	class:Catch::ExeName
+ExeName	Templates/cpp/tests/catch.hpp	/^		class ExeName : public ComposableParserImpl<ExeName> {$/;"	c	namespace:Catch
+ExplicitFailure	Templates/cpp/tests/catch.hpp	/^		ExplicitFailure = FailureBit | 2,$/;"	e	enum:Catch::ResultWas::OfType
+ExpressionFailed	Templates/cpp/tests/catch.hpp	/^		ExpressionFailed = FailureBit | 1,$/;"	e	enum:Catch::ResultWas::OfType
+FailureBit	Templates/cpp/tests/catch.hpp	/^		FailureBit = 0x10,$/;"	e	enum:Catch::ResultWas::OfType
+FalseTest	Templates/cpp/tests/catch.hpp	/^		FalseTest = 0x04, \/\/ Prefix expression with !$/;"	e	enum:Catch::ResultDisposition::Flags
+FatalErrorCondition	Templates/cpp/tests/catch.hpp	/^		FatalErrorCondition = 0x200 | FailureBit$/;"	e	enum:Catch::ResultWas::OfType
+Flags	Templates/cpp/tests/catch.hpp	/^	enum Flags {$/;"	g	struct:Catch::ResultDisposition
+GENERATE	Templates/cpp/tests/catch.hpp	3480;"	d
+Help	Templates/cpp/tests/catch.hpp	/^			Help(bool& showHelpFlag)$/;"	f	struct:Catch::Help
+Help	Templates/cpp/tests/catch.hpp	/^		struct Help : Opt {$/;"	s	namespace:Catch
+INCLUDES	Templates/cpp/Makefile	/^INCLUDES = -I include\/ -I \/usr\/local\/include $/;"	m
+INTERNAL_CATCH_CAPTURE	Templates/cpp/tests/catch.hpp	2043;"	d
+INTERNAL_CATCH_CATCH	Templates/cpp/tests/catch.hpp	1950;"	d
+INTERNAL_CATCH_DEF	Templates/cpp/tests/catch.hpp	647;"	d
+INTERNAL_CATCH_DYNAMIC_SECTION	Templates/cpp/tests/catch.hpp	2189;"	d
+INTERNAL_CATCH_ELSE	Templates/cpp/tests/catch.hpp	1983;"	d
+INTERNAL_CATCH_EXPAND1	Templates/cpp/tests/catch.hpp	645;"	d
+INTERNAL_CATCH_EXPAND2	Templates/cpp/tests/catch.hpp	646;"	d
+INTERNAL_CATCH_IF	Templates/cpp/tests/catch.hpp	1978;"	d
+INTERNAL_CATCH_INFO	Templates/cpp/tests/catch.hpp	2048;"	d
+INTERNAL_CATCH_METHOD_AS_TEST_CASE	Templates/cpp/tests/catch.hpp	676;"	d
+INTERNAL_CATCH_MSG	Templates/cpp/tests/catch.hpp	2035;"	d
+INTERNAL_CATCH_NOINTERNAL_CATCH_DEF	Templates/cpp/tests/catch.hpp	648;"	d
+INTERNAL_CATCH_NO_THROW	Templates/cpp/tests/catch.hpp	1988;"	d
+INTERNAL_CATCH_REACT	Templates/cpp/tests/catch.hpp	1960;"	d
+INTERNAL_CATCH_REGISTER_TESTCASE	Templates/cpp/tests/catch.hpp	698;"	d
+INTERNAL_CATCH_SECTION	Templates/cpp/tests/catch.hpp	2184;"	d
+INTERNAL_CATCH_TEST	Templates/cpp/tests/catch.hpp	1963;"	d
+INTERNAL_CATCH_TESTCASE	Templates/cpp/tests/catch.hpp	672;"	d
+INTERNAL_CATCH_TESTCASE2	Templates/cpp/tests/catch.hpp	664;"	d
+INTERNAL_CATCH_TESTCASE_METHOD_NO_REGISTRATION	Templates/cpp/tests/catch.hpp	653;"	d
+INTERNAL_CATCH_TESTCASE_NO_REGISTRATION	Templates/cpp/tests/catch.hpp	651;"	d
+INTERNAL_CATCH_TEST_CASE_METHOD	Templates/cpp/tests/catch.hpp	694;"	d
+INTERNAL_CATCH_TEST_CASE_METHOD2	Templates/cpp/tests/catch.hpp	684;"	d
+INTERNAL_CATCH_THROWS	Templates/cpp/tests/catch.hpp	2001;"	d
+INTERNAL_CATCH_THROWS_AS	Templates/cpp/tests/catch.hpp	2017;"	d
+INTERNAL_CATCH_THROWS_MATCHES	Templates/cpp/tests/catch.hpp	3124;"	d
+INTERNAL_CATCH_THROWS_STR_MATCHES	Templates/cpp/tests/catch.hpp	2053;"	d
+INTERNAL_CATCH_TRANSLATE_EXCEPTION	Templates/cpp/tests/catch.hpp	2363;"	d
+INTERNAL_CATCH_TRANSLATE_EXCEPTION2	Templates/cpp/tests/catch.hpp	2354;"	d
+INTERNAL_CATCH_TRANSLATE_EXCEPTION_NO_REG	Templates/cpp/tests/catch.hpp	2294;"	d
+INTERNAL_CATCH_TRY	Templates/cpp/tests/catch.hpp	1949;"	d
+INTERNAL_CATCH_UNIQUE_NAME	Templates/cpp/tests/catch.hpp	349;"	d
+INTERNAL_CATCH_UNIQUE_NAME_LINE	Templates/cpp/tests/catch.hpp	347;"	d
+INTERNAL_CATCH_UNIQUE_NAME_LINE2	Templates/cpp/tests/catch.hpp	346;"	d
+INTERNAL_CHECK_THAT	Templates/cpp/tests/catch.hpp	3112;"	d
+IStream	Templates/cpp/tests/catch.hpp	/^struct IStream {$/;"	s	namespace:Catch
+ITestCaseRegistry	Templates/cpp/tests/catch.hpp	/^struct ITestCaseRegistry {$/;"	s	namespace:Catch
+ITestInvoker	Templates/cpp/tests/catch.hpp	/^struct ITestInvoker {$/;"	s	namespace:Catch
+Info	Templates/cpp/tests/catch.hpp	/^		Info = 1,$/;"	e	enum:Catch::ResultWas::OfType
+InternalParseResult	Templates/cpp/tests/catch.hpp	/^			virtual auto parse(std::string const& exeName, TokenStream const& tokens) const -> InternalParseResult = 0;$/;"	m	namespace:Catch::Detail
+IsStreamInsertable	Templates/cpp/tests/catch.hpp	/^	class IsStreamInsertable {$/;"	c	namespace:Catch::Detail
+LIBS	Templates/cpp/Makefile	/^LIBS = $/;"	m
+MAINFILE	Templates/base/Makefile	/^MAINFILE = main.tex$/;"	m
+NOMINMAX	Templates/cpp/tests/catch.hpp	5628;"	d
+NOMINMAX	Templates/cpp/tests/catch.hpp	5642;"	d
+NameAndTags	Templates/cpp/tests/catch.hpp	/^struct NameAndTags {$/;"	s	namespace:Catch
+No	Templates/cpp/tests/catch.hpp	/^		No$/;"	e	enum:Catch::CaseSensitive::Choice
+NonCopyable	Templates/cpp/tests/catch.hpp	/^class NonCopyable {$/;"	c	namespace:Catch
+Normal	Templates/cpp/tests/catch.hpp	/^		Normal = 0x01,$/;"	e	enum:Catch::ResultDisposition::Flags
+OBJECTS	Templates/cpp/Makefile	/^OBJECTS = $(SOURCES:$(SRC_PATH)\/%.$(SRC_EXT)=$(BUILD_PATH)\/%.o)$/;"	m
+OC_MAKE_UNIQUE_NAME	Templates/cpp/tests/catch.hpp	3800;"	d
+OC_TEST_CASE	Templates/cpp/tests/catch.hpp	3812;"	d
+OC_TEST_CASE2	Templates/cpp/tests/catch.hpp	3801;"	d
+OfType	Templates/cpp/tests/catch.hpp	/^	enum OfType {$/;"	g	struct:Catch::ResultWas
+Ok	Templates/cpp/tests/catch.hpp	/^		Ok = 0,$/;"	e	enum:Catch::ResultWas::OfType
+Opt	Templates/cpp/tests/catch.hpp	/^			Opt(LambdaT const& ref, std::string const& hint)$/;"	f	class:Catch::Opt
+Opt	Templates/cpp/tests/catch.hpp	/^			Opt(T& ref, std::string const& hint)$/;"	f	class:Catch::Opt
+Opt	Templates/cpp/tests/catch.hpp	/^			explicit Opt(LambdaT const& ref)$/;"	f	class:Catch::Opt
+Opt	Templates/cpp/tests/catch.hpp	/^			explicit Opt(bool& ref)$/;"	f	class:Catch::Opt
+Opt	Templates/cpp/tests/catch.hpp	/^		class Opt : public ParserRefImpl<Opt> {$/;"	c	namespace:Catch
+Parser	Templates/cpp/tests/catch.hpp	/^			auto operator+(T const& other) const -> Parser;$/;"	m	class:Catch::ComposableParserImpl
+Parser	Templates/cpp/tests/catch.hpp	/^			auto operator|(T const& other) const -> Parser;$/;"	m	class:Catch::ComposableParserImpl
+Parser	Templates/cpp/tests/catch.hpp	/^		struct Parser : ParserBase {$/;"	s	namespace:Catch
+ParserRefImpl	Templates/cpp/tests/catch.hpp	/^			ParserRefImpl(LambdaT const& ref, std::string const& hint)$/;"	f	class:Catch::ParserRefImpl
+ParserRefImpl	Templates/cpp/tests/catch.hpp	/^			ParserRefImpl(T& ref, std::string const& hint)$/;"	f	class:Catch::ParserRefImpl
+ParserRefImpl	Templates/cpp/tests/catch.hpp	/^			explicit ParserRefImpl(std::shared_ptr<BoundRef> const& ref)$/;"	f	class:Catch::ParserRefImpl
+ParserRefImpl	Templates/cpp/tests/catch.hpp	/^		class ParserRefImpl : public ComposableParserImpl<DerivedT> {$/;"	c	namespace:Catch
+RegistrarForTagAliases	Templates/cpp/tests/catch.hpp	/^struct RegistrarForTagAliases {$/;"	s	namespace:Catch
+ResultDisposition	Templates/cpp/tests/catch.hpp	/^struct ResultDisposition {$/;"	s	namespace:Catch
+ResultWas	Templates/cpp/tests/catch.hpp	/^struct ResultWas {$/;"	s	namespace:Catch
+ReusableStringStream	Templates/cpp/tests/catch.hpp	/^class ReusableStringStream {$/;"	c	namespace:Catch
+SOURCES	Templates/cpp/Makefile	/^SOURCES = $(shell find $(SRC_PATH) -name '*.$(SRC_EXT)' | sort -k 1nr | cut -f2-)$/;"	m
+SOURCES_NOTMAIN	Templates/cpp/Makefile	/^SOURCES_NOTMAIN := $(filter-out src\/main.$(SRC_EXT),$(SOURCES))$/;"	m
+SRC_EXT	Templates/cpp/Makefile	/^SRC_EXT = cpp$/;"	m
+SRC_PATH	Templates/cpp/Makefile	/^SRC_PATH = src$/;"	m
+SourceLineInfo	Templates/cpp/tests/catch.hpp	/^struct SourceLineInfo {$/;"	s	namespace:Catch
+StreamEndStop	Templates/cpp/tests/catch.hpp	/^struct StreamEndStop {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<NSObject*> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<NSString*> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<R C::*> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<T ^> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<T*> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<bool> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<char const*> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<char*> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<char> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<char[SZ]> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<double> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<float> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<int> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<long long> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<long> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<signed char> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<signed char[SZ]> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<std::nullptr_t> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<std::pair<T1, T2>> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<std::string> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<std::string_view> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<std::wstring> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<std::wstring_view> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<unsigned char> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<unsigned char[SZ]> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<unsigned int> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<unsigned long long> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<unsigned long> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<wchar_t const*> {$/;"	s	namespace:Catch
+StringMaker	Templates/cpp/tests/catch.hpp	/^struct StringMaker<wchar_t*> {$/;"	s	namespace:Catch
+StringRef	Templates/cpp/tests/catch.hpp	/^	    : StringRef(s_empty, 0)$/;"	f	class:Catch::StringRef
+StringRef	Templates/cpp/tests/catch.hpp	/^class StringRef {$/;"	c	namespace:Catch
+SuppressFail	Templates/cpp/tests/catch.hpp	/^		SuppressFail = 0x08 \/\/ Failures are reported but do not fail the test$/;"	e	enum:Catch::ResultDisposition::Flags
+TSC	Templates/ts/Makefile	/^TSC=tsc$/;"	m
+TSC_FLAGS	Templates/ts/Makefile	/^TSC_FLAGS = --sourceMap -t ES5 --noEmitOnError$/;"	m
+TSLINT	Templates/ts/Makefile	/^TSLINT=tslint$/;"	m
+TS_DIRS	Templates/ts/Makefile	/^TS_DIRS=.\/src .\/src\/libs$/;"	m
+TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED	Templates/cpp/tests/catch.hpp	12;"	d
+TestInvokerAsMethod	Templates/cpp/tests/catch.hpp	/^class TestInvokerAsMethod : public ITestInvoker {$/;"	c	namespace:Catch
+ThrewException	Templates/cpp/tests/catch.hpp	/^		ThrewException = Exception | 1,$/;"	e	enum:Catch::ResultWas::OfType
+Unknown	Templates/cpp/tests/catch.hpp	/^		Unknown = -1,$/;"	e	enum:Catch::ResultWas::OfType
+VERSION_MAJOR	Templates/cpp/version.mk	/^VERSION_MAJOR=0$/;"	m
+VERSION_MINOR	Templates/cpp/version.mk	/^VERSION_MINOR=0$/;"	m
+VERSION_PATCH	Templates/cpp/version.mk	/^VERSION_PATCH=1$/;"	m
+VERSION_STRING	Templates/cpp/version.mk	/^VERSION_STRING=$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)/;"	m
+WIN32_LEAN_AND_MEAN	Templates/cpp/tests/catch.hpp	5632;"	d
+WIN32_LEAN_AND_MEAN	Templates/cpp/tests/catch.hpp	5645;"	d
+Warning	Templates/cpp/tests/catch.hpp	/^		Warning = 2,$/;"	e	enum:Catch::ResultWas::OfType
+Yes	Templates/cpp/tests/catch.hpp	/^		Yes,$/;"	e	enum:Catch::CaseSensitive::Choice
+_BSD_SOURCE	Templates/cpp/tests/catch.hpp	201;"	d
+arcSafeRelease	Templates/cpp/tests/catch.hpp	/^inline void arcSafeRelease(NSObject* obj)$/;"	f
+arcSafeRelease	Templates/cpp/tests/catch.hpp	/^inline void arcSafeRelease(NSObject*)$/;"	f
+capturedExpression	Templates/cpp/tests/catch.hpp	/^	StringRef capturedExpression;$/;"	m	struct:Catch::AssertionInfo
+convert	Templates/cpp/tests/catch.hpp	/^	    convert(const Fake& value)$/;"	f	struct:Catch::StringMaker
+convert	Templates/cpp/tests/catch.hpp	/^	static std::string convert(NSObject* nsObject)$/;"	f	struct:Catch::StringMaker
+convert	Templates/cpp/tests/catch.hpp	/^	static std::string convert(NSString* nsstring)$/;"	f	struct:Catch::StringMaker
+convert	Templates/cpp/tests/catch.hpp	/^	static std::string convert(R C::*p)$/;"	f	struct:Catch::StringMaker
+convert	Templates/cpp/tests/catch.hpp	/^	static std::string convert(U* p)$/;"	f	struct:Catch::StringMaker
+convert	Templates/cpp/tests/catch.hpp	/^	static std::string convert(char const* str)$/;"	f	struct:Catch::StringMaker
+convert	Templates/cpp/tests/catch.hpp	/^	static std::string convert(const std::pair<T1, T2>& pair)$/;"	f	struct:Catch::StringMaker
+convert	Templates/cpp/tests/catch.hpp	/^	static std::string convert(signed char const* str)$/;"	f	struct:Catch::StringMaker
+convert	Templates/cpp/tests/catch.hpp	/^	static std::string convert(unsigned char const* str)$/;"	f	struct:Catch::StringMaker
+convertUnknownEnumToString	Templates/cpp/tests/catch.hpp	/^	std::string convertUnknownEnumToString(E e)$/;"	f	namespace:Catch::Detail
+convertUnstreamable	Templates/cpp/tests/catch.hpp	/^	convertUnstreamable(T const& ex)$/;"	f	namespace:Catch::Detail
+convertUnstreamable	Templates/cpp/tests/catch.hpp	/^	convertUnstreamable(T const& value)$/;"	f	namespace:Catch::Detail
+convertUnstreamable	Templates/cpp/tests/catch.hpp	/^	convertUnstreamable(T const&)$/;"	f	namespace:Catch::Detail
+false_type	Templates/cpp/tests/catch.hpp	/^		static auto test(...) -> std::false_type;$/;"	m	class:Catch::Detail::IsStreamInsertable::std
+file	Templates/cpp/tests/catch.hpp	/^	char const* file;$/;"	m	struct:Catch::SourceLineInfo
+isFalseTest	Templates/cpp/tests/catch.hpp	/^inline bool isFalseTest(int flags) { return (flags & ResultDisposition::FalseTest) != 0; }$/;"	f	namespace:Catch
+line	Templates/cpp/tests/catch.hpp	/^	    , line(_line)$/;"	f	struct:Catch::SourceLineInfo
+line	Templates/cpp/tests/catch.hpp	/^	std::size_t line;$/;"	m	struct:Catch::SourceLineInfo
+lineInfo	Templates/cpp/tests/catch.hpp	/^	SourceLineInfo lineInfo;$/;"	m	struct:Catch::AssertionInfo
+m_args	Templates/cpp/tests/catch.hpp	/^			std::vector<Arg> m_args;$/;"	m	struct:Catch::Parser
+m_data	Templates/cpp/tests/catch.hpp	/^	    , m_data(other.m_data)$/;"	f	class:Catch::StringRef
+m_data	Templates/cpp/tests/catch.hpp	/^	char* m_data = nullptr;$/;"	m	class:Catch::StringRef
+m_description	Templates/cpp/tests/catch.hpp	/^			std::string m_description;$/;"	m	class:Catch::ParserRefImpl
+m_exeName	Templates/cpp/tests/catch.hpp	/^			mutable ExeName m_exeName;$/;"	m	struct:Catch::Parser
+m_hint	Templates/cpp/tests/catch.hpp	/^			std::string m_hint;$/;"	m	class:Catch::ParserRefImpl
+m_index	Templates/cpp/tests/catch.hpp	/^	std::size_t m_index;$/;"	m	class:Catch::ReusableStringStream
+m_name	Templates/cpp/tests/catch.hpp	/^			std::shared_ptr<std::string> m_name;$/;"	m	class:Catch::ExeName
+m_optNames	Templates/cpp/tests/catch.hpp	/^			std::vector<std::string> m_optNames;$/;"	m	class:Catch::Opt
+m_optionality	Templates/cpp/tests/catch.hpp	/^			Optionality m_optionality = Optionality::Optional;$/;"	m	class:Catch::ParserRefImpl
+m_options	Templates/cpp/tests/catch.hpp	/^			std::vector<Opt> m_options;$/;"	m	struct:Catch::Parser
+m_oss	Templates/cpp/tests/catch.hpp	/^	std::ostream* m_oss;$/;"	m	class:Catch::ReusableStringStream
+m_ref	Templates/cpp/tests/catch.hpp	/^			std::shared_ptr<BoundRef> m_ref;$/;"	m	class:Catch::ParserRefImpl
+m_ref	Templates/cpp/tests/catch.hpp	/^			std::shared_ptr<BoundValueRefBase> m_ref;$/;"	m	class:Catch::ExeName
+m_size	Templates/cpp/tests/catch.hpp	/^	    , m_size(other.m_size)$/;"	f	class:Catch::StringRef
+m_size	Templates/cpp/tests/catch.hpp	/^	    , m_size(size)$/;"	f	class:Catch::StringRef
+m_size	Templates/cpp/tests/catch.hpp	/^	    , m_size(stdString.size())$/;"	f	class:Catch::StringRef
+m_size	Templates/cpp/tests/catch.hpp	/^	size_type m_size;$/;"	m	class:Catch::StringRef
+m_start	Templates/cpp/tests/catch.hpp	/^	char const* m_start;$/;"	m	class:Catch::StringRef
+m_testAsMethod	Templates/cpp/tests/catch.hpp	/^	    : m_testAsMethod(testAsMethod)$/;"	f	class:Catch::TestInvokerAsMethod
+m_testAsMethod	Templates/cpp/tests/catch.hpp	/^	void (C::*m_testAsMethod)();$/;"	m	class:Catch::TestInvokerAsMethod
+macroName	Templates/cpp/tests/catch.hpp	/^	StringRef macroName;$/;"	m	struct:Catch::AssertionInfo
+main	Templates/cpp/src/main.cpp	/^int main(int argc, char** argv)$/;"	f
+name	Templates/cpp/tests/catch.hpp	/^	StringRef name;$/;"	m	struct:Catch::NameAndTags
+noexcept	Templates/cpp/tests/catch.hpp	/^	AutoReg(ITestInvoker* invoker, SourceLineInfo const& lineInfo, StringRef const& classOrMethod, NameAndTags const& nameAndTags) noexcept;$/;"	m	struct:Catch::AutoReg
+noexcept	Templates/cpp/tests/catch.hpp	/^	NameAndTags(StringRef const& name_ = StringRef(), StringRef const& tags_ = StringRef()) noexcept;$/;"	m	struct:Catch::NameAndTags
+noexcept	Templates/cpp/tests/catch.hpp	/^	SourceLineInfo(char const* _file, std::size_t _line) noexcept$/;"	m	struct:Catch::SourceLineInfo
+noexcept	Templates/cpp/tests/catch.hpp	/^	StringRef(char const* rawChars) noexcept;$/;"	m	class:Catch::StringRef
+noexcept	Templates/cpp/tests/catch.hpp	/^	bool empty() const noexcept;$/;"	m	struct:Catch::SourceLineInfo
+noexcept	Templates/cpp/tests/catch.hpp	/^	bool operator<(SourceLineInfo const& other) const noexcept;$/;"	m	struct:Catch::SourceLineInfo
+noexcept	Templates/cpp/tests/catch.hpp	/^	bool operator==(SourceLineInfo const& other) const noexcept;$/;"	m	struct:Catch::SourceLineInfo
+noexcept	Templates/cpp/tests/catch.hpp	/^	void swap(StringRef& other) noexcept;$/;"	m	class:Catch::StringRef
+operator +	Templates/cpp/tests/catch.hpp	/^T const& operator+(T const& value, StreamEndStop)$/;"	f	namespace:Catch
+ostream	Templates/cpp/tests/catch.hpp	/^auto operator<<(std::ostream& os, StringRef const& sr) -> std::ostream&;$/;"	m	class:Catch::std
+other	Templates/cpp/tests/catch.hpp	/^	SourceLineInfo(SourceLineInfo const& other) = default;$/;"	m	struct:Catch::SourceLineInfo
+performOptionalSelector	Templates/cpp/tests/catch.hpp	/^inline id performOptionalSelector(id obj, SEL sel)$/;"	f
+rangeToString	Templates/cpp/tests/catch.hpp	/^	std::string rangeToString(InputIterator first, InputIterator last)$/;"	f	namespace:Catch::Detail
+rawMemoryToString	Templates/cpp/tests/catch.hpp	/^	std::string rawMemoryToString(const T& object)$/;"	f	namespace:Catch::Detail
+resultDisposition	Templates/cpp/tests/catch.hpp	/^	ResultDisposition::Flags resultDisposition;$/;"	m	struct:Catch::AssertionInfo
+s_empty	Templates/cpp/tests/catch.hpp	/^	static constexpr char const* const s_empty = "";$/;"	m	class:Catch::StringRef
+string	Templates/cpp/tests/catch.hpp	/^	auto str() const -> std::string;$/;"	m	class:Catch::ReusableStringStream::std
+string	Templates/cpp/tests/catch.hpp	/^auto operator+(StringRef const& lhs, StringRef const& rhs) -> std::string;$/;"	m	class:Catch::std
+string	Templates/cpp/tests/catch.hpp	/^auto operator+(StringRef const& lhs, char const* rhs) -> std::string;$/;"	m	class:Catch::std
+string	Templates/cpp/tests/catch.hpp	/^auto operator+(char const* lhs, StringRef const& rhs) -> std::string;$/;"	m	class:Catch::std
+string	Templates/cpp/tests/catch.hpp	/^auto operator+=(std::string& lhs, StringRef const& sr) -> std::string&;$/;"	m	class:Catch::std
+stringify	Templates/cpp/tests/catch.hpp	/^	inline std::string stringify(NSString* nsstring)$/;"	f	namespace:Catch::Detail
+stringify	Templates/cpp/tests/catch.hpp	/^	std::string stringify(const T& e)$/;"	f	namespace:Catch::Detail
+tags	Templates/cpp/tests/catch.hpp	/^	StringRef tags;$/;"	m	struct:Catch::NameAndTags
+value	Templates/cpp/tests/catch.hpp	/^		static const bool value = decltype(test<std::ostream, const T&>(0))::value;$/;"	m	class:Catch::Detail::IsStreamInsertable
+writeToStream	Templates/cpp/tests/catch.hpp	/^			void writeToStream(std::ostream& os) const$/;"	f	struct:Catch::Parser
