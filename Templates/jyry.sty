@@ -1,0 +1,178 @@
+% Jyry's LaTeX  configuration
+% Free to copy and use
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{jyry}
+
+% Basic Packages
+\RequirePackage[english]{babel} 
+\RequirePackage[T1]{fontenc} 
+\RequirePackage{hyperref} 
+\RequirePackage[margin=1.5in]{geometry} 
+\RequirePackage{ulem} 
+\RequirePackage{xcolor} 
+\RequirePackage{enumerate}
+\RequirePackage{textcomp}
+\RequirePackage{csquotes}
+\RequirePackage{microtype}
+\RequirePackage{biblatex} 
+\RequirePackage{appendix} 
+\RequirePackage{float} 
+\RequirePackage{multirow} 
+\RequirePackage[textsize=scriptsize]{todonotes}
+\RequirePackage[framemethod=TikZ]{mdframed} 
+
+% Mathematics packages
+\RequirePackage{amsmath,amssymb,amsthm} 
+\RequirePackage{cleveref} 
+\RequirePackage{theorem} 
+\RequirePackage{thmtools} 
+\RequirePackage{mathtools} 
+\RequirePackage{mathrsfs} 
+\RequirePackage{stmaryrd} 
+
+% Tikz
+\RequirePackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{cd}
+
+% Colours
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+
+% New Commands
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vocab}[1]{\textbf{\color{blue} #1}}
+
+% Sets
+\newcommand{\CC}{\mathbb C}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+
+% Graphs
+\DeclareMathOperator{\diam}{diam}
+
+
+% Theorems, definitions, etc.
+\newcounter{definition}[section]\setcounter{definition}{0}
+\newcommand{\thedef}{\arabic{section}.\arabic{definition}}
+\newenvironment{definition}[2][]{%
+\refstepcounter{definition}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Definition~\thedef}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Definition~\thedef~(#1)}:}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=blue!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=blue!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+
+\newcounter{proposition}[section]\setcounter{proposition}{0}
+\newcommand{\thepo}{\arabic{section}.\arabic{proposition}}
+\newenvironment{proposition}[2][]{%
+\refstepcounter{proposition}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Proposition~\thepo}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Proposition~\thepo~(#1)}:}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=blue!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=blue!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+
+\newcounter{theorem}[section]\setcounter{theorem}{0}
+\newcommand{\theth}{\arabic{section}.\arabic{theorem}}
+\newenvironment{theorem}[2][]{%
+\refstepcounter{theorem}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Theorem~\theth}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Theorem~\theth~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=green!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=green!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+
+\newcounter{remark}[section]\setcounter{remark}{0}
+\newcommand{\thele}{\arabic{section}.\arabic{remark}}
+\newenvironment{remark}[2][]{%
+\refstepcounter{remark}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Remark~\thele}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Remark~\thele~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=yellow!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=yellow!20,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+
+\newcounter{lemma}[section]\setcounter{lemma}{0}
+\newcommand{\there}{\arabic{section}.\arabic{lemma}}
+\newenvironment{lemma}[2][]{%
+\refstepcounter{lemma}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Lemma~\there}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Lemma~\there~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=orange!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=orange!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+
+% Examples
+\newcounter{example}[section]\setcounter{example}{0}
+\newcommand{\theex}{\arabic{section}.\arabic{example}}
+\newenvironment{example}[2][]{%
+\refstepcounter{example}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Example~\there}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Example~\there~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=gray!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=gray!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+
+
+%% End of sty file
+\endinput
