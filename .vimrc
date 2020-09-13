@@ -10,7 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'shinchu/lightline-gruvbox.vim'
-
+Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'rhysd/vim-clang-format'
@@ -26,6 +26,12 @@ Plugin 'honza/vim-snippets'
 Plugin 'ajh17/VimCompletesMe'
 
 Plugin 'ludovicchabant/vim-gutentags'
+
+Plugin 'fatih/vim-go'
+
+Plugin 'neovimhaskell/haskell-vim'
+
+Plugin 'lifepillar/vim-solarized8'
 call vundle#end()
 
 filetype plugin indent on
@@ -86,6 +92,7 @@ if exists('+termguicolors')
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+let g:gruvbox_guisp_fallback = "bg"
 set bg=dark
 colorscheme gruvbox
 let g:lightline = { 'colorscheme': 'gruvbox' }
@@ -94,6 +101,10 @@ let g:lightline = { 'colorscheme': 'gruvbox' }
 
 "" Syntastic
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -101,16 +112,25 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_c_checkers=['make']
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_go_checkers = ['go']
 let g:syntastic_asm_checkers = ['nasm']
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_mode_map = { 'mode': 'passive',
+                            \ 'active_filetypes': ['python'],
+                            \ 'passive_filetypes': ['html', 'javascript'] }
+
 
 "" VimTex
-let g:vimtex_view_method = 'mupdf'
+let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 let g:tex_conceal = ""
+let g:vimtex_latexmk_build_dir = './build'
 
 "" UltiSnips
 let g:UltiSnipsExpandTrigger="<S-tab>"
 let g:UltiSnipsJumpForwardTrigger="<S-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"" Journalling
+iabbrev date- <c-r>=strftime("%Y/%m/%d")<cr>

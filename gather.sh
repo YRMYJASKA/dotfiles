@@ -2,12 +2,8 @@
 
 cp ~/.vimrc ./.vimrc
 cp ~/.zshrc ./.zshrc
-cp ~/.emacs ./.emacs
-
-cp ~/.i3 . -r
+cp ~/.doom.d -r  ./.doom.d
 
 cp ~/.config/i3/config ./.config/i3/config
 
 cp -r ~/Templates/ .
-
-cp -r ~/.emacs.d .

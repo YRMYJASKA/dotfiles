@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/jyryhjelt/.oh-my-zsh"
+  export ZSH="/home/jyry/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,9 +114,13 @@ alias d="sudo dnf install"
 alias dup="sudo dnf update"
 alias dr="sudo dnf remove"
 alias ci="vim ~/.config/i3/config"
-alias p="new_project"
 
 #go 
 export PATH=$PATH:/usr/local/go/bin
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+# Journalling
+alias j="vim $(date +"%Y-%m-%d").md"
+# fix slow terminal
+RPROMPT=''
