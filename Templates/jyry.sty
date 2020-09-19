@@ -1,6 +1,5 @@
 % Jyry's LaTeX  configuration
 % Free to copy and use
-% Place me in ~/texmf/tex/latex/local for global usage
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{jyry}
 
@@ -8,7 +7,8 @@
 \RequirePackage[english]{babel} 
 \RequirePackage[T1]{fontenc} 
 \RequirePackage{hyperref} 
-\RequirePackage[margin=1.5in]{geometry} 
+\RequirePackage[]{geometry} 
+\RequirePackage{sectsty}
 \RequirePackage{ulem} 
 \RequirePackage{xcolor} 
 \RequirePackage{enumerate}
@@ -37,14 +37,16 @@
 \usetikzlibrary{cd}
 
 % Colours
-\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{maroon}{rgb}{0.5, 0, 0}
+\allsectionsfont{\color{maroon}}
+\subsectionfont{\color{maroon}}
 
 % New Commands
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\eps}{\varepsilon}
-\newcommand{\vocab}[1]{\textbf{\color{blue} #1}}
+\newcommand{\vocab}[1]{\textbf{\color{maroon} #1}}
 
 % Sets
 \newcommand{\CC}{\mathbb C}
@@ -59,7 +61,6 @@
 
 
 % Theorems, definitions, etc.
-\DeclareOption{thm}{
 \newcounter{definition}[section]\setcounter{definition}{0}
 \newcommand{\thedef}{\arabic{section}.\arabic{definition}}
 \newenvironment{definition}[2][]{%
@@ -92,11 +93,12 @@ frametitle={%
 frametitle={%
 {\strut Proposition~\thepo~(#1)}:}}%
 }%
-\mdfsetup{innertopmargin=7pt,linecolor=blue!30, innerbottommargin=10pt,%
-    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=blue!10,%
+\mdfsetup{innertopmargin=7pt,linecolor=teal!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=teal!10,%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
+
 \newcounter{theorem}[section]\setcounter{theorem}{0}
 \newcommand{\theth}{\arabic{section}.\arabic{theorem}}
 \newenvironment{theorem}[2][]{%
@@ -115,6 +117,7 @@ frametitle={%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
+
 \newcounter{remark}[section]\setcounter{remark}{0}
 \newcommand{\thele}{\arabic{section}.\arabic{remark}}
 \newenvironment{remark}[2][]{%
@@ -133,6 +136,7 @@ frametitle={%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
+
 \newcounter{lemma}[section]\setcounter{lemma}{0}
 \newcommand{\there}{\arabic{section}.\arabic{lemma}}
 \newenvironment{lemma}[2][]{%
@@ -151,6 +155,7 @@ frametitle={%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
+
 % Examples
 \newcounter{example}[section]\setcounter{example}{0}
 \newcommand{\theex}{\arabic{section}.\arabic{example}}
@@ -159,17 +164,18 @@ frametitle={%
 \ifstrempty{#1}%
 {\mdfsetup{%
 frametitle={%
-{\strut Example~\there}:}}
+{\strut Example~\theex}:}}
 }%
 {\mdfsetup{%
 frametitle={%
-{\strut Example~\there~(#1):}}}%
+{\strut Example~\theex~(#1):}}}%
 }%
 \mdfsetup{innertopmargin=7pt,linecolor=gray!30, innerbottommargin=10pt,%
     linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=gray!10,%
 }
 \begin{mdframed}[]\relax%
-#2}{\end{mdframed}}}
-\ProcessOptions\relax
+#2}{\end{mdframed}}
+
+
 %% End of sty file
 \endinput
