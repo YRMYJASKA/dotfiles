@@ -8,7 +8,7 @@
     ("~/Shared/Org/planner.org" "~/Shared/Org/dailytodo.org")))
  '(package-selected-packages
    (quote
-    (org-bullets pretty-symbols company-go go-mode yasnippet-snippets yasnippet evil-dvorak))))
+    (gnuplot mu4e-alert org-bullets pretty-symbols company-go go-mode yasnippet-snippets yasnippet evil-dvorak))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
