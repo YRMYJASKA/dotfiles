@@ -1,14 +1,16 @@
 % Jyry's LaTeX  configuration
 % Free to copy and use
+% Place me in ~/texmf/tex/latex/local for global usage
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{jyry}
 
 % Basic Packages
 \RequirePackage[english]{babel} 
 \RequirePackage[T1]{fontenc} 
+\RequirePackage[utf8]{inputenc} 
 \RequirePackage{hyperref} 
-\RequirePackage[]{geometry} 
-\RequirePackage{sectsty}
+\RequirePackage[margin=1.5in]{geometry} 
+\RequirePackage{sectsty} 
 \RequirePackage{ulem} 
 \RequirePackage{xcolor} 
 \RequirePackage{enumerate}
@@ -21,6 +23,7 @@
 \RequirePackage{multirow} 
 \RequirePackage[textsize=scriptsize]{todonotes}
 \RequirePackage[framemethod=TikZ]{mdframed} 
+\RequirePackage{enumitem}
 
 % Mathematics packages
 \RequirePackage{amsmath,amssymb,amsthm} 
@@ -31,6 +34,9 @@
 \RequirePackage{mathrsfs} 
 \RequirePackage{stmaryrd} 
 
+% CS packages
+\RequirePackage{minted}
+
 % Tikz
 \RequirePackage{tikz}
 \usetikzlibrary{positioning}
@@ -38,8 +44,11 @@
 
 % Colours
 \definecolor{maroon}{rgb}{0.5, 0, 0}
-\allsectionsfont{\color{maroon}}
-\subsectionfont{\color{maroon}}
+\DeclareOption{colour}{
+    \allsectionsfont{\color{maroon}}
+    \subsectionfont{\color{maroon}}
+}
+
 
 % New Commands
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
@@ -61,6 +70,7 @@
 
 
 % Theorems, definitions, etc.
+\DeclareOption{thm}{
 \newcounter{definition}[section]\setcounter{definition}{0}
 \newcommand{\thedef}{\arabic{section}.\arabic{definition}}
 \newenvironment{definition}[2][]{%
@@ -74,8 +84,8 @@ frametitle={%
 frametitle={%
 {\strut Definition~\thedef~(#1)}:}}%
 }%
-\mdfsetup{innertopmargin=7pt,linecolor=blue!30, innerbottommargin=10pt,%
-    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=blue!10,%
+\mdfsetup{innertopmargin=7pt,linecolor=teal!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=teal!10,%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
@@ -93,12 +103,11 @@ frametitle={%
 frametitle={%
 {\strut Proposition~\thepo~(#1)}:}}%
 }%
-\mdfsetup{innertopmargin=7pt,linecolor=teal!30, innerbottommargin=10pt,%
-    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=teal!10,%
+\mdfsetup{innertopmargin=7pt,linecolor=blue!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=blue!10,%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
-
 \newcounter{theorem}[section]\setcounter{theorem}{0}
 \newcommand{\theth}{\arabic{section}.\arabic{theorem}}
 \newenvironment{theorem}[2][]{%
@@ -117,7 +126,6 @@ frametitle={%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
-
 \newcounter{remark}[section]\setcounter{remark}{0}
 \newcommand{\thele}{\arabic{section}.\arabic{remark}}
 \newenvironment{remark}[2][]{%
@@ -136,7 +144,6 @@ frametitle={%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
-
 \newcounter{lemma}[section]\setcounter{lemma}{0}
 \newcommand{\there}{\arabic{section}.\arabic{lemma}}
 \newenvironment{lemma}[2][]{%
@@ -155,7 +162,6 @@ frametitle={%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
-
 % Examples
 \newcounter{example}[section]\setcounter{example}{0}
 \newcommand{\theex}{\arabic{section}.\arabic{example}}
@@ -175,7 +181,36 @@ frametitle={%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
+% Problems 
+\newcounter{problem}[section]\setcounter{problem}{0}
+\newcommand{\thepr}{\arabic{section}.\arabic{problem}}
+\newenvironment{problem}[2][]{%
+\refstepcounter{problem}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Problem~\thepr}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Problem~\thepr~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=black!90, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=black!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+}
+
+% Simple solution proof-environment
+\newenvironment{sol}{
+\begin{proof}[Solution]
+}
+{
+\end{proof}
+}
+\ProcessOptions\relax
 
 
-%% End of sty file
+%%End of sty file
 \endinput

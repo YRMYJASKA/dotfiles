@@ -119,3 +119,10 @@
         account-vars)
       (error "No email account found"))))
 (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
+
+(setq org-latex-listings 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+(setq org-src-fontify-natively t)
