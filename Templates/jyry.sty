@@ -5,7 +5,7 @@
 \ProvidesPackage{jyry}
 
 % Basic Packages
-\RequirePackage[english]{babel} 
+\RequirePackage[english]{babel}
 \RequirePackage[T1]{fontenc} 
 \RequirePackage[utf8]{inputenc} 
 \RequirePackage{hyperref} 
@@ -26,21 +26,29 @@
 \RequirePackage{enumitem}
 
 % Mathematics packages
-\RequirePackage{amsmath,amssymb,amsthm} 
+\RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{braket}
+\RequirePackage{bm} 
 \RequirePackage{cleveref} 
 \RequirePackage{theorem} 
+\RequirePackage{pgfplots} 
 \RequirePackage{thmtools} 
 \RequirePackage{mathtools} 
 \RequirePackage{mathrsfs} 
 \RequirePackage{stmaryrd} 
+\RequirePackage{asymptote} 
 
-% CS packages
-\RequirePackage{minted}
 
 % Tikz
 \RequirePackage{tikz}
+\usepackage{tikz-3dplot}
 \usetikzlibrary{positioning}
 \usetikzlibrary{cd}
+
+
+% Asymptote
+\renewcommand\asydir{asyfigs}
+
 
 % Colours
 \definecolor{maroon}{rgb}{0.5, 0, 0}
@@ -56,10 +64,16 @@
 \newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\vocab}[1]{\textbf{\color{maroon} #1}}
+\newcommand{\cycs}[1]{\sum_{\text{cyc}}{#1}}
+\newcommand{\syms}[1]{\sum_{\text{sym}}{#1}}
+\newcommand{\cycp}[1]{\prod_{\text{cyc}}{#1}}
+\newcommand{\symp}[1]{\prod_{\text{sym}}{#1}}
 
 % Sets
 \newcommand{\CC}{\mathbb C}
 \newcommand{\FF}{\mathbb F}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\EE}{\mathbb E}
 \newcommand{\NN}{\mathbb N}
 \newcommand{\QQ}{\mathbb Q}
 \newcommand{\RR}{\mathbb R}
@@ -70,6 +84,9 @@
 
 
 % Theorems, definitions, etc.
+%% Boring theorems etc.
+
+%% Flashy theorems and defs. etc.
 \DeclareOption{thm}{
 \newcounter{definition}[section]\setcounter{definition}{0}
 \newcommand{\thedef}{\arabic{section}.\arabic{definition}}
@@ -181,6 +198,7 @@ frametitle={%
 }
 \begin{mdframed}[]\relax%
 #2}{\end{mdframed}}
+
 % Problems 
 \newcounter{problem}[section]\setcounter{problem}{0}
 \newcommand{\thepr}{\arabic{section}.\arabic{problem}}
@@ -209,8 +227,7 @@ frametitle={%
 {
 \end{proof}
 }
+
 \ProcessOptions\relax
 
-
-%%End of sty file
 \endinput

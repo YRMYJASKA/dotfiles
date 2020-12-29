@@ -73,7 +73,7 @@
 (setq +mu4e-backend 'offlineimap)
 (setq mu4e-maildir "~/Mail")
 (setq mu4e-get-mail-command "offlineimap")
-(set-email-account! "jyryhjelt.com"
+(set-email-account! "jyryhjelt"
  '((mu4e-sent-folder       . "/Jyryhjelt/INBOX.Sent")
    (mu4e-drafts-folder     . "/Jyryhjelt/INBOX.Drafts")
    (mu4e-trash-folder      . "/Jyryhjelt/INBOX.Trash")
@@ -87,7 +87,7 @@
       user-mail-address "jyry@jyryhjelt.com")
 
 (defvar my-mu4e-account-alist
-  '(("jyryhjelt.com"
+  '(("Jyryhjelt"
      (mu4e-sent-folder "/Jyryhjelt/INBOX.Sent")
      (user-mail-address "jyry@jyryhjelt.com")
      (smtpmail-smtp-user "jyry@jyryhjelt.com")
@@ -120,9 +120,21 @@
       (error "No email account found"))))
 (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
 
+;; Latex settings
+
 (setq org-latex-listings 'minted
       org-latex-packages-alist '(("" "minted"))
       org-latex-pdf-process
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 (setq org-src-fontify-natively t)
+
+(defun my-asy-compile ()
+  "Switches to asyfigs directory and compiles all .asy files"
+  (interactive)
+  (shell-command "asy asyfigs/*.asy -o asyfigs/"))
+
+(add-hook 'LaTeX-mode-hook
+          (lambda () (local-set-key (kbd "C-c C-a") 'my-asy-compile)))
+
+(require 'asy-mode)
