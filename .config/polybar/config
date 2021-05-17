@@ -1,0 +1,207 @@
+[bar/yrmybar]
+modules-left = i3
+modules-right = date filesystem cpu memory ram battery pulseaudio pulseaudio-microphone
+separator = " | "
+separator-foreground = #6E56AF  
+spacing = 0
+
+font-0 = "SourceCodePro-Bold:style=Bold:size=12;0"
+font-1 = fontawesome:size=15;1  
+
+
+scroll-up = "#i3.prev"
+scroll-down = "#i3.next"
+
+
+[module/i3]
+type = internal/i3
+fuzzy-match = true
+enable-scroll = false
+index-sort = true
+
+; Available tags:
+;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
+;   <label-mode> (default)
+format = <label-state> <label-mode>
+
+; Available tokens:
+;   %mode%
+; Default: %mode%
+label-mode = %mode%
+label-mode-padding = 1
+label-mode-background = #e60053
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-focused = %index%
+label-focused-foreground = #ffffff
+label-focused-background = #54487A
+label-focused-underline = #fba922
+label-focused-padding = 1
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-unfocused = %index%
+label-unfocused-padding = 1
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-visible = %index%
+label-visible-underline = #555555
+label-visible-padding = 1
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+
+; Separator in between workspaces
+label-separator = 
+label-separator-padding = 1
+label-separator-foreground = #ffb52a
+
+[module/date]
+type = internal/date
+label = " %date% %time%"
+time = %H:%M
+date = %Y-%m-%d%
+format-foreground = #fff
+
+[module/filesystem]
+type = internal/fs
+; Mountpoints to display
+mount-0 = /
+fixed-values = true
+format-unmounted = <label-unmounted>
+label-mounted =  %percentage_used%% of %total%
+
+[module/memory]
+type = internal/memory
+label = "RAM: %gb_used%/%gb_total% "
+
+interval = 3
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = AC
+; see "man date" for details on how to format the time string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+; Default: %H:%M:%S
+time-format = %H:%M
+
+; Available tags:
+;   <label-charging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-charging>
+format-charging = <animation-charging> <label-charging>
+
+; Available tags:
+;   <label-discharging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current charge rate in watts)
+label-charging = %percentage%%
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+label-discharging = %percentage%% (%time%)
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+label-full =  %percentage%%
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+; Only applies if <animation-discharging> is used
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+; Framerate in milliseconds
+animation-discharging-framerate = 500
+
+[module/cpu]
+type = internal/cpu
+format = <label>
+label = CPU: %percentage%%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+mat-volume = <label-volume>
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels%
+label-volume = Vol. %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels%
+label-muted = Vol. %percentage%%
+label-muted-foreground = #666
+
+[module/pulseaudio-microphone]
+type = custom/script
+format = <label>
+label = "%output%"
+exec = ~/.config/polybar/pulseaudio-microphone/pulseaudio-microphone.sh
+tail = true
+click-left = ~/.config/polybar/pulseaudio-microphone/pulseaudio-microphone.sh --toggle &
+scroll-up = ~/.config/polybar/pulseaudio-microphone/pulseaudio-microphone.sh --increase &
+scroll-down = ~/.config/polybar/pulseaudio-microphone/pulseaudio-microphone.sh --decrease &
