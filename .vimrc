@@ -20,8 +20,6 @@ Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'lervag/vimtex'
 
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 
 Plugin 'ajh17/VimCompletesMe'
 
