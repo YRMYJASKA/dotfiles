@@ -16,7 +16,7 @@
  '(jdee-db-spec-breakpoint-face-colors (cons "#1d2127" "#686858"))
  '(objed-cursor-color "#aa4450")
  '(package-selected-packages
-   '(yasnippet-snippets yasnippet flycheck-rust rustic jedi lsp-jedi spinner auctex lsp-ivy lsp-mode flycheck projectile doom-themes evil-org org-evil elfeed-org elfeed evil-collection evil-org-mode evil-magit magit org-bullets org-mode general evil all-the-icons counsel ivy-rich which-key ivy use-package))
+   '(org-projectile hl-todo yasnippet-snippets yasnippet flycheck-rust rustic jedi lsp-jedi spinner auctex lsp-ivy lsp-mode flycheck projectile doom-themes evil-org org-evil elfeed-org elfeed evil-collection evil-org-mode evil-magit magit org-bullets org-mode general evil all-the-icons counsel ivy-rich which-key ivy use-package))
  '(pdf-view-midnight-colors (cons "#c2c2b0" "#222222"))
  '(rustic-ansi-faces
    ["#222222" "#aa4450" "#87875f" "#cc8800" "#87AFD7" "#8787AF" "#87ceeb" "#c2c2b0"])
@@ -60,6 +60,7 @@
 (set-fringe-mode 10) ;; set the amount of padding on the left
 (setq make-backup-files nil)
 (setq create-lockfiles nil)
+(setq ring-bell-function 'ignore)
 
 ;; Environment stuff
 (setenv "PATH" "~/.local/bin:/home/jyry/.cargo/bin:~/bin:/usr/local/bin:/usr/bin")
@@ -118,7 +119,7 @@
     "<tab>n" '(tab-new :which-key "new tab")
     "<tab>r" '(tab-rename :which-key "rename tab")
     "<tab>d" '(tab-close :which-key "close tab")
-    "<tab>s" '(tab-switcher :which-key "select tab") 
+    "<tab>s" '(tab-switcher :which-key "select tab")
     "<tab>1" '(tab-bar-select-tab 1) ;; FIXME: worked once but never again after that
     "<tab>2" '(tab-bar-select 2)
     "<tab>3" '(tab-bar-select 3)
@@ -213,7 +214,7 @@
 ;;; Leader key-bindings for Org
 (yrmy/leader-keys
   "o" '(:ignore t :which-key "Org-mode")
-  "oa" 'org-agenda)
+  "oA" 'org-agenda)
 
 
 ;; Git with Magit
@@ -233,11 +234,24 @@
 (use-package elfeed-org
   :after elfeed
   :config
-  (setq rmh-elfeed-org-files (list "~Shared/Org/rssfeed.org")))
+  (elfeed-org)
+  (setq rmh-elfeed-org-files (list "~/Shared/Org/rssfeed.org")))
+(yrmy/leader-keys
+  "r" '(:ignore t :which-key "rss")
+  "rr" 'elfeed
+  "ru" 'elfeed-update)
 
 ;; Projectile
-(use-package projectile)
-
+(use-package projectile
+  :config (projectile-mode +1))
+(use-package org-projectile
+  :after (org projectile)
+  :bind (("C-c n p" . org-projectile-project-todo-completing-read)
+         ("C-c c" . org-capture))
+  :config
+  (push (org-projectile-project-todo-entry) org-capture-templates))
+(yrmy/leader-keys
+  "p" 'projectile-command-map)
 ;; FLycheck
 (use-package flycheck
   :config
@@ -253,6 +267,7 @@
          (c-mode . lsp)
          (python-mode . lsp)
          (rustic-mode . lsp)
+         (or-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config
@@ -302,3 +317,8 @@
 (use-package electric
   :config
   (electric-pair-mode 1))
+
+;; HL-todo
+(use-package hl-todo
+  :config
+  (hl-todo-mode t))
