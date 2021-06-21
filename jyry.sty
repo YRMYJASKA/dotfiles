@@ -1,0 +1,233 @@
+% Jyry's LaTeX  configuration
+% Free to copy and use
+% Place me in ~/texmf/tex/latex/local for global usage
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{jyry}
+
+% Basic Packages
+\RequirePackage[english]{babel}
+\RequirePackage[T1]{fontenc} 
+\RequirePackage[utf8]{inputenc} 
+\RequirePackage{hyperref} 
+\RequirePackage[margin=1.5in]{geometry} 
+\RequirePackage{sectsty} 
+\RequirePackage{ulem} 
+\RequirePackage{xcolor} 
+\RequirePackage{enumerate}
+\RequirePackage{textcomp}
+\RequirePackage{csquotes}
+\RequirePackage{microtype}
+\RequirePackage{biblatex} 
+\RequirePackage{appendix} 
+\RequirePackage{float} 
+\RequirePackage{multirow} 
+\RequirePackage[textsize=scriptsize]{todonotes}
+\RequirePackage[framemethod=TikZ]{mdframed} 
+\RequirePackage{enumitem}
+
+% Mathematics packages
+\RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{braket}
+\RequirePackage{bm} 
+\RequirePackage{cleveref} 
+\RequirePackage{theorem} 
+\RequirePackage{pgfplots} 
+\RequirePackage{thmtools} 
+\RequirePackage{mathtools} 
+\RequirePackage{mathrsfs} 
+\RequirePackage{stmaryrd} 
+\RequirePackage{asymptote} 
+
+
+% Tikz
+\RequirePackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{positioning}
+\usetikzlibrary{cd}
+
+
+% Asymptote
+\renewcommand\asydir{asyfigs}
+
+
+% Colours
+\definecolor{maroon}{rgb}{0.5, 0, 0}
+\DeclareOption{colour}{
+    \allsectionsfont{\color{maroon}}
+    \subsectionfont{\color{maroon}}
+}
+
+
+% New Commands
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vocab}[1]{\textbf{\color{maroon} #1}}
+\newcommand{\cycs}[1]{\sum_{\text{cyc}}{#1}}
+\newcommand{\syms}[1]{\sum_{\text{sym}}{#1}}
+\newcommand{\cycp}[1]{\prod_{\text{cyc}}{#1}}
+\newcommand{\symp}[1]{\prod_{\text{sym}}{#1}}
+
+% Sets
+\newcommand{\CC}{\mathbb C}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+
+% Graphs
+\DeclareMathOperator{\diam}{diam}
+
+
+% Theorems, definitions, etc.
+%% Boring theorems etc.
+
+%% Flashy theorems and defs. etc.
+\DeclareOption{thm}{
+\newcounter{definition}[section]\setcounter{definition}{0}
+\newcommand{\thedef}{\arabic{section}.\arabic{definition}}
+\newenvironment{definition}[2][]{%
+\refstepcounter{definition}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Definition~\thedef}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Definition~\thedef~(#1)}:}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=teal!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=teal!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+
+\newcounter{proposition}[section]\setcounter{proposition}{0}
+\newcommand{\thepo}{\arabic{section}.\arabic{proposition}}
+\newenvironment{proposition}[2][]{%
+\refstepcounter{proposition}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Proposition~\thepo}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Proposition~\thepo~(#1)}:}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=blue!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=blue!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+\newcounter{theorem}[section]\setcounter{theorem}{0}
+\newcommand{\theth}{\arabic{section}.\arabic{theorem}}
+\newenvironment{theorem}[2][]{%
+\refstepcounter{theorem}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Theorem~\theth}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Theorem~\theth~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=green!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=green!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+\newcounter{remark}[section]\setcounter{remark}{0}
+\newcommand{\thele}{\arabic{section}.\arabic{remark}}
+\newenvironment{remark}[2][]{%
+\refstepcounter{remark}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Remark~\thele}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Remark~\thele~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=yellow!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=yellow!20,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+\newcounter{lemma}[section]\setcounter{lemma}{0}
+\newcommand{\there}{\arabic{section}.\arabic{lemma}}
+\newenvironment{lemma}[2][]{%
+\refstepcounter{lemma}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Lemma~\there}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Lemma~\there~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=orange!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=orange!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+% Examples
+\newcounter{example}[section]\setcounter{example}{0}
+\newcommand{\theex}{\arabic{section}.\arabic{example}}
+\newenvironment{example}[2][]{%
+\refstepcounter{example}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Example~\theex}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Example~\theex~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=gray!30, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=gray!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+
+% Problems 
+\newcounter{problem}[section]\setcounter{problem}{0}
+\newcommand{\thepr}{\arabic{section}.\arabic{problem}}
+\newenvironment{problem}[2][]{%
+\refstepcounter{problem}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+{\strut Problem~\thepr}:}}
+}%
+{\mdfsetup{%
+frametitle={%
+{\strut Problem~\thepr~(#1):}}}%
+}%
+\mdfsetup{innertopmargin=7pt,linecolor=black!90, innerbottommargin=10pt,%
+    linewidth=5pt,rightline=false,topline=false, bottomline=false,backgroundcolor=black!10,%
+}
+\begin{mdframed}[]\relax%
+#2}{\end{mdframed}}
+}
+
+% Simple solution proof-environment
+\newenvironment{sol}{
+\begin{proof}[Solution]
+}
+{
+\end{proof}
+}
+
+\ProcessOptions\relax
+
+\endinput
