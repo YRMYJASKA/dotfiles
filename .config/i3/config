@@ -185,7 +185,8 @@ client.focused              #6E56AF #6E56AF #6E56AF
 
 
 # Set wallpaper
-exec_always "feh --bg-fill ~/.config/i3/gentoo-abducted-1680x1050.png"
+# exec_always "feh --bg-fill  ~/.config/i3/gentoo-abducted-1680x1050.png"
+exec_always "feh --bg-fill  ~/.config/i3/double-wallpaper.png"
 
 # Launch Polybar
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
